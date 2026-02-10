@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #area {
+            font: normal 2em arial;
+            background-color: aquamarine;
+            color: blue;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>eventos DOM</h1>
+    <p>
+        Eventos DOM no JavaScript são ações ou ocorrências detectadas pelo navegador—como cliques, toques, carregamento de página ou pressionamento de teclas—que permitem interatividade na web. Desenvolvedores utilizam "ouvintes" (addEventListener) para capturar esses sinais e executar códigos dinâmicos em resposta, manipulando elementos HTML e a experiência do usuário.
+    </p> 
+    
+    <h2>Principais Tipos de Eventos DOM</h2>
+    <h3>Eventos de Mouse (MouseEvent):</h3>
+    <p>
+        click: Ao clicar em um elemento. <br>
+        dblclick: Ao clicar duas vezes. <br>
+        mouseenter: O mouse entra na área de um elemento. <br>
+        mouseout: O mouse sai da área de um elemento. <br>
+    </p>
+    <h3>Eventos de Teclado (KeyboardEvent):</h3>
+    <p>
+        keydown: Tecla pressionada. <br>
+        keyup: Tecla solta. <br>
+    </p>
+    <h3>Eventos de Formulário (Form Events):</h3>
+    <p>
+        submit: Formulário enviado. <br>
+        change: Valor de input/select alterado. <br>
+        focus: Elemento ganha foco. <br>
+    </p>
+    <h3>Eventos de Documento/Janela:</h3>
+    <p>
+        DOMContentLoaded: HTML totalmente carregado e analisado, ideal para iniciar scripts. <br>
+        load: Página totalmente carregada, incluindo imagens. <br>
+        scroll: Usuário rola a página. <br>
+    </p>
+    <h3>Eventos de Toque (TouchEvent):</h3>
+    <p>touchstart, touchmove, touchend. </p>
+    <div id="area">exemplo</div>
+    <script>
+        var botao = document.getElementById('area')
+        botao.addEventListener('click', clicar)
+        botao.addEventListener('mouseenter', entrar)
+        botao.addEventListener('mouseout', saiu)
+        function entrar() {
+            botao.style.backgroundColor = 'blue'
+            botao.style.color = 'aquamarine'
+        }
+        function saiu() {
+            botao.style.backgroundColor = 'aquamarine'
+            botao.style.color = 'blue'
+        }
+        function clicar() {
+            botao.style.backgroundColor = 'red'
+            botao.style.color = 'black'
+        }
+    </script>
+</body>
+</html>
