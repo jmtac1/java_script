@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condições</title>
+</head>
+<body>
+    <h1>radar</h1>
+    <h2>velocidade máxima permitida de 100 km/h</h2>
+    velocidade do carro <input type="number" name="velocidade" id="velocidade" placeholder="km/h">
+    <input type="button" value="verificar" onclick="calcular()">
+    <p id="cont"></p>
+    <script>
+        function calcular() {
+            var velocidade = document.querySelector('input#velocidade')
+            var v = Number(velocidade.value)
+            var cont = document.querySelector('p#cont')
+
+            if(v > 100) {
+                cont.innerHTML = `sua velocidade foi de ${v}km/h então você foi multado`
+            } else {
+                cont.innerHTML = `sua velocidade foi de ${v}km/h então você não foi multado`
+            }
+        }
+    </script>
+</body>
+</html>

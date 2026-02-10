@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condições</title>
+</head>
+<body>
+    <h1>verificar nacionalidade</h1>
+    <input type="text" name="pais" id="pais" placeholder="sua nacionalidade">
+    <input type="button" value="verificar" onclick="verificar()">
+    <p id="nacionalidade"></p>
+    <script>
+        function verificar() {
+            var pais = document.getElementById('pais').value;
+            var nac = document.getElementById('nacionalidade')
+            if (pais == 'brasil') {
+            nac.innerHTML = `você nasceu no ${pais} então você é brasileiro`
+            } else {
+            nac.innerHTML = `você nasceu no/a ${pais} então você é estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
