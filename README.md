@@ -1,2 +1,2 @@
 # java_script
- Aprendendo Java Script
+ Aprendendo JavaScript
