@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+    <style>
+        body {
+            background-color: bisque;
+            color: teal;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>comandos para formatar strings: .length, .toUpperCase(), .toLowerCase() e document.write()</h1>
+    <script>
+        var nome = window.prompt("seu nome:")
+        document.write(`<p>olá, <strong>${nome}!</strong> seu nome tem ${nome.length} letras.</p>`)
+        document.write(`<p>seu nome em letras minúsculas ${nome.toLowerCase()}</p>`)
+        document.write(`<p>seu nome em letras maiúsculas ${nome.toUpperCase()}</p>`)
+        var n1 = Number(1500.5)
+        document.write('<h1>comandos para formatar numeros decimais: toFixed(), replace() e para formatar em formato de dinheiro: toLocaleString()</h1>')
+        document.write(`<p>numero normal: ${n1}</p>`)
+        document.write(`<p>numero com toFixed(): ${n1.toFixed(2)}</p>`)
+        document.write(`<p>numero com toFixed() e replace(): ${n1.toFixed(2).replace('.', ',')}</p>`)
+        document.write(`<p>numero com toLocaleString(): ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>`)
+    </script>
+</body>
+</html>

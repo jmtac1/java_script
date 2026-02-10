@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 3</title>
+    <style>
+        body {
+            background-color: bisque;
+            color: teal;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>conversão e formatação de string</h1>
+    <p>para converter um tipo primitivo de string para Number se usa a função "Number.parseInt()" ou "Number.parseFloat()" ou só "Number()"</p>
+    <p>para formatar strings você pode usar concatenação: ('ola ' + nome) ou usar template string: (`ola ${nome}`), para usar template string se usa crase o sinal de sifrão e chaves</p>
+    <script>
+        var n1 = Number(window.prompt("digite um número: "));
+        var n2 = Number(window.prompt("digite outro número: "));
+        var nome = window.prompt("digeite seu nome");
+        var soma = n1 + n2;
+        window.alert("a soma é: " + soma);
+        window.alert(`ola ${nome}`);
+    </script>
+</body>
+</html>
