@@ -26,13 +26,13 @@ function verificar() {
         msg.innerHTML = `adulto de ${idade} anos` 
         img.src = 'imagens/adulto_m.jpg'
     } else if (idade < 60 && sexo.value == 'f') {
-        msg.innerHTML = `adulto de ${idade} anos` 
+        msg.innerHTML = `adulta de ${idade} anos` 
         img.src = 'imagens/adulto_f.jpg'
     } else if (idade >= 60 && sexo.value == 'm') {
         msg.innerHTML = `idoso de ${idade} anos` 
         img.src = 'imagens/idoso_m.jpg'
     } else if (idade >= 60 && sexo.value == 'f') {
-        msg.innerHTML = `idoso de ${idade} anos` 
+        msg.innerHTML = `idosa de ${idade} anos` 
         img.src = 'imagens/idoso_f.jpg'
     }
 }
