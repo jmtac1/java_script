@@ -13,17 +13,19 @@
     <main>
         <p>
             <label for="ano">Ano de Nascimento: </label>
-            <input type="number" name="ano" id="ano" min="1900" max="2026">
+            <input type="number" name="ano" id="ano" min="1900" max="3000">
         </p>
         <p>
-            <label for="sexo">Sexo: </label>
-            <input type="radio" name="sexo" id="sexo" value="m"> Masculino
-            <input type="radio" name="sexo" id="sexo" value="f"> Feminino
+            Sexo: 
+            <input type="radio" name="sexo" id="mas" checked value="m">
+            <label for="mas">Masculino</label>
+            <input type="radio" name="sexo" id="fem" value="f"> 
+            <label for="fem">Feminino</label>
         </p>
         <p>
             <input type="button" value="Verificar" onclick="verificar()">
         </p>
-        <p id="msg"></p>
+        <p id="msg">Preencha os dados acima para ver o resultado</p>
         <img id="img" src="" alt="">
     </main>
     <footer>Criado por João Manoel</footer>
