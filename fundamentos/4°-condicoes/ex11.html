@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>condições</title>
+    <style>
+        body {
+            background-color: azure;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: turquoise;
+        }
+    </style>
 </head>
 <body>
     <h1>verificar nacionalidade</h1>
@@ -12,7 +19,7 @@
     <p id="nacionalidade"></p>
     <script>
         function verificar() {
-            var pais = document.getElementById('pais').value;
+            var pais = document.getElementById('pais').value
             var nac = document.getElementById('nacionalidade')
             if (pais == 'brasil') {
             nac.innerHTML = `você nasceu no ${pais} então você é brasileiro`
