@@ -4,69 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horário</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-size: 1.1em;
-            font-family: sans-serif
-        }
-        body {
-            color: aliceblue;
-            text-align: center;
-            display: grid;
-            justify-content: center;
-            margin: auto;
-        }
-        body > h1 {
-            font-size: 3em;
-            margin: 50px;
-        }
-        main {
-            color: black;
-            background-color: aliceblue;
-            width: 600px;
-            padding: 40px;
-            justify-self: center;
-            border-radius: 10px;
-            box-shadow: -1px 4px 20px 3px rgba(0, 0, 0, 0.511);
-        }
-        main > h2 {
-            margin-bottom: 20px;
-        }
-        img#img {
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>hora do dia</h1>
+    <header>
+        <h1>hora do dia</h1>
+    </header>
     <main>
         <h2 id="msg"></h2>
         <img id="img" src="" alt="imagem">
     </main>
-    <script>
-        var agora = new Date()
-        var hora = agora.getHours()
-        var body = document.body
-        var msg = document.getElementById('msg')
-        var img = document.getElementById('img')
-
-        if (hora < 12) {
-            msg.innerHTML = `agora são ${hora} horas.`
-            body.style.backgroundColor = 'rgb(194, 194, 95)'
-            img.src = 'imagens/bom_dia.jpg'
-        } else if (hora < 18) {
-            msg.innerHTML = `agora são ${hora} horas.`
-            body.style.backgroundColor = 'rgb(245, 141, 84)'
-            img.src = 'imagens/boa_tarde.jpg'
-        } else {
-            msg.innerHTML = `agora são ${hora} horas.`
-            body.style.backgroundColor = 'rgb(21, 21, 67)'
-            img.src = 'imagens/boa_noite.jpg'
-        }
-    </script>
+    <script src="script.js"></script>
+    <footer>Criado por João Manoel</footer>
 </body>
 </html>
