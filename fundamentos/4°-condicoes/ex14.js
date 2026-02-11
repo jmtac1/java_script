@@ -1,6 +1,5 @@
 var agora = new Date()
 var dia = agora.getDay()
-dia = 7
 
 switch (dia) {
     case 0:
