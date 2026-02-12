@@ -4,6 +4,7 @@ function contar() {
     var passotxt = document.querySelector('input#pas')
     var msg = document.querySelector('p#msg')
     var cont = document.querySelector('p#cont')
+    cont.innerHTML = ''
     var f = document.querySelector('p#f')
     var inicio = Number(iniciotxt.value)
     var fim = Number(fimtxt.value)

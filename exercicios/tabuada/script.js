@@ -2,6 +2,7 @@ function criar() {
     var numtxt = document.querySelector('input#num')
     var num = Number(numtxt.value)
     var lista = document.querySelector('select#res')
+    lista.innerHTML = ''
     
     if (numtxt.value.length == 0) {
         window.alert('faltam dados, tente novamente')
