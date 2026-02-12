@@ -10,12 +10,26 @@ function contar() {
     var passo = Number(passotxt.value)
 
 
-    if (passo == 0) {
-        window.alert('digite um valor maior que 0')
+    if (iniciotxt.value.length == 0 || fimtxt.value.length == 0 || passotxt.value.length == 0) {
+        window.alert('faltam dados, tente novamente')
     } else {
         msg.innerHTML = 'Contando: '
-        for (var c = inicio; c <= fim; c += passo) {
-            cont.innerHTML += `${c} &#x1F449 `
+        if (passo <= 0) {
+            window.alert('passo ínvalido, considerando passo 1')
+            passo = 1
+        }
+        if (inicio < fim) {
+            if (cont.innerHTML == '') {
+               for (var c = inicio; c <= fim; c += passo) {
+                cont.innerHTML += `${c} &#x1F449 `
+                } 
+            }
+        } else {
+            if (cont.innerHTML == '') {
+                for (var c = inicio; c >= fim; c -= passo) {
+                cont.innerHTML += `${c} &#x1F449 `
+                }
+            }
         }
         f.innerHTML = '&#x1F3C1'
     }
