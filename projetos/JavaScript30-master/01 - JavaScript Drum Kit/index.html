@@ -3,20 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>drum kit</title>
+    <title>Drum Kit</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <div class="tecla">A</div>
-        <div class="tecla">B</div>
-        <div class="tecla">C</div>
-        <div class="tecla">D</div>
-        <div class="tecla">E</div>
-        <div class="tecla">F</div>
-        <div class="tecla">G</div>
-        <div class="tecla">H</div>
-        <div class="tecla">I</div>
+        <div data-key="65" class="tecla">
+            A
+            <p>CLAP</p>
+        </div>
+        <div data-key="83" class="tecla">
+            S
+            <p>HIHAT</p>
+        </div>
+        <div data-key="68" class="tecla">
+            D
+            <p>KICK</p>
+        </div>
+        <div data-key="70" class="tecla">
+            F
+            <p>OPENHAT</p>
+        </div>
+        <div data-key="71" class="tecla">
+            G
+            <p>BOOM</p>
+        </div>
+        <div data-key="72" class="tecla">
+            H
+            <p>RIDE</p>
+        </div>
+        <div data-key="74" class="tecla">
+            J
+            <p>SNARE</p>
+        </div>
+        <div data-key="75" class="tecla">
+            K
+            <p>TOM</p>
+        </div>
+        <div data-key="76" class="tecla">
+            L
+            <p>TINK</p>
+        </div>
     </main>
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/hihat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/openhat.wav"></audio>
+    <audio data-key="71" src="sounds/boom.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tom.wav"></audio>
+    <audio data-key="76" src="sounds/tink.wav"></audio>
+    <script>
+        function tocarSom(e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const tecla = document.querySelector(`div[data-key="${e.keyCode}"]`);
+            if (!audio) return;
+            audio.currentTime = 0;
+            audio.play();
+            tecla.classList.add('tocando')
+        }
+
+        function removeTransition(e) {
+            if (e.propertyName !== 'transform') return;
+            e.target.classList.remove('tocando');
+        }
+
+        const teclas = Array.from(document.querySelectorAll('.tecla'));
+        teclas.forEach(key => key.addEventListener('transitionend', removeTransition));
+        window.addEventListener('keydown', tocarSom);
+    </script>
 </body>
 </html>

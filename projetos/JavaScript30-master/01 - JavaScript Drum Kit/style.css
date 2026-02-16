@@ -8,6 +8,32 @@ main {
     background-image: url(background.jpg);
     width: 100vw;
     height: 100vh;
-    display: grid;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tecla {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    padding-top: 20px;
+    height: 60px;
+    width: 130px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.347);
+    color: white;
+    font-size:1.7em;
+    transition: all .3s;
+}
+.tecla p {
+    color: yellow;
+    font-size: small;
+}
+.tocando {
+    transform: scale(1.1);
+    border-color: yellow;
+    box-shadow: 0 0 10px yellow; 
 }
