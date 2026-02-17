@@ -9,10 +9,34 @@
 <body>
     <main class="relogio">
         <div class="relogio-face">
-            <div class="hora"></div>
-            <div class="minuto"></div>
-            <div class="segundo"></div>
+            <div class="ponteiro hora"></div>
+            <div class="ponteiro minuto"></div>
+            <div class="ponteiro segundo"></div>
         </div>
     </main>
+    <script>
+        const ponteiroSegundos = document.querySelector('.segundo')
+        const ponteiroMinutos = document.querySelector('.minuto')
+        const ponteiroHora = document.querySelector('.hora')
+
+        function definirData() {
+            const agora = new Date();
+
+            const segundos = agora.getSeconds();
+            const grausSegundos = ((segundos / 60) * 360) + 90;
+            ponteiroSegundos.style.transform = `rotate(${grausSegundos}deg)`;
+
+            const minutos = agora.getMinutes();
+            const grausMinutos = ((minutos / 60) * 360) + ((segundos / 60) * 6) + 90;
+            ponteiroMinutos.style.transform = `rotate(${grausMinutos}deg)`;
+
+            const horas = agora.getHours();
+            const grausHoras = ((horas / 12) * 360) + ((minutos / 60) * 30) + 90;
+            ponteiroHora.style.transform = `rotate(${grausHoras}deg)`;
+        }
+
+        setInterval(definirData, 1000);
+        definirData();
+    </script>
 </body>
 </html>
