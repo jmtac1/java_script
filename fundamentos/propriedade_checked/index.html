@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade checked</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 2em;
+        }
+        #botaoEnviar {
+            font-size: .7em;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="check" id="check">
+    <label for="check">Confirmar</label> <br> <br>
+    <input type="radio" name="comida" id="pizza">
+    <label for="pizza">Pizza</label> <br>
+    <input type="radio" name="comida" id="bolo">
+    <label for="bolo">Bolo</label> <br>
+    <input type="radio" name="comida" id="macarrao">
+    <label for="macarrao">Macarrão</label> <br> <br>
+
+    <button type="submit" id="botaoEnviar">Enviar</button>
+
+    <p id="confirmar"></p>
+    <p id="comida"></p>
+    <script>
+        const checkbox = document.getElementById('check')
+        const pizza = document.getElementById('pizza')
+        const bolo = document.getElementById('bolo')
+        const macarrao = document.getElementById('macarrao')
+        const botaoEnviar = document.getElementById('botaoEnviar')
+        const confirmar = document.getElementById('confirmar')
+        const comida = document.getElementById('comida')
+
+        botaoEnviar.onclick = function() {
+            if (checkbox.checked) {
+                confirmar.textContent = 'usuário confirmou'
+            } else {
+                confirmar.textContent = 'usuário não confirmou'
+            }
+            if (pizza.checked) {
+                comida.textContent = 'usuário gosta de pizza'
+            } else if (macarrao.checked) {
+                comida.textContent = 'usuário gosta de macarrao'
+            } else if (bolo.checked) {
+                comida.textContent = 'usuário gosta de bolo'
+            } else {
+                comida.textContent = 'usuário não gosta de nenhuma das comidas acima'
+            }
+        }
+    </script>
+</body>
+</html>
