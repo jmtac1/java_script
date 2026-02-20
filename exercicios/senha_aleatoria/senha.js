@@ -17,7 +17,7 @@ function gerarSenha(tamanho, minusculas, maiusculas, numeros, simbolos) {
         return 'senha deve no minimo 1 digito';
     }
     if (caracteresPermitidos.length === 0) {
-        return 'senha tem que ter pelo menos 1 configuração'
+        return 'senha tem que ter pelo menos 1 configuração';
     }
 
     for (let i = 0; i < tamanho; i++) {
