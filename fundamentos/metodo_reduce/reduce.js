@@ -12,7 +12,7 @@ function soma(anterior, proximo) {
 
 // exemplo 2
 const notas = [5, 4, 7, 8, 10, 2];
-const maximo = notas.reduce(max)
+const maximo = notas.reduce(max);
 
 console.log(maximo);
 
