@@ -34,7 +34,7 @@ class Usuario {
     }
 
     static getUsuarios() {
-        console.log(`existem ${Usuario.usuarios} usuarios`)
+        console.log(`existem ${Usuario.usuarios} usuarios`);
     }
 }
 
