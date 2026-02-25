@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <label for="valor">valor inicial</label> <br>
+        <input type="number" name="valor" id="valor"> <br>
+        <label for="juros">juros</label> <br>
+        <input type="number" name="juros" id="juros"> <br>
+        <label for="anos">anos</label> <br>
+        <input type="number" name="anos" id="anos"> <br>
+        <button type="submit" onclick="calcular()">calcular</button>
+        <h3 id="resultado">total: <span id="monetario">R$0.00</span></h3>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
