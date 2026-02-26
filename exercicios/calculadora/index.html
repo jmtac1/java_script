@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <input id="tela" readonly>
+        <p>
+            <button onclick="adicionarNaTela('+')" class="operacao" type="button">+</button>
+            <button onclick="adicionarNaTela('7')" type="button">7</button>
+            <button onclick="adicionarNaTela('8')" type="button">8</button>
+            <button onclick="adicionarNaTela('9')" type="button">9</button>
+        </p>
+        <p>
+            <button onclick="adicionarNaTela('-')" class="operacao" type="button">-</button>
+            <button onclick="adicionarNaTela('4')" type="button">4</button>
+            <button onclick="adicionarNaTela('5')" type="button">5</button>
+            <button onclick="adicionarNaTela('6')" type="button">6</button>
+        </p>
+        <p>
+            <button onclick="adicionarNaTela('*')" class="operacao" type="button">*</button>
+            <button onclick="adicionarNaTela('1')" type="button">1</button>
+            <button onclick="adicionarNaTela('2')" type="button">2</button>
+            <button onclick="adicionarNaTela('3')" type="button">3</button>
+        </p>
+        <p>
+            <button onclick="adicionarNaTela('/')" class="operacao" type="button">/</button>
+            <button onclick="adicionarNaTela('0')" type="button">0</button>
+            <button onclick="adicionarNaTela('.')" type="button">.</button>
+            <button onclick="calcular()" type="button">=</button>
+        </p>
+        <p><button onclick="limparTela()" class="operacao" type="button">C</button></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
