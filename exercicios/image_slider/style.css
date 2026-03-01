@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+.slider {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+.slider img {
+    width: 800px;
+    height: 600px;
+    display: none;
+}
+img.mostrarSlide {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.229);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.anterior {
+    left: 0;
+}
+.proximo {
+    right: 0;
+}
+@keyframes fade {
+    from {opacity: .5;}
+    to {opacity: 1;}
+}
