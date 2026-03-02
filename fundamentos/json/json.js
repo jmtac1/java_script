@@ -20,4 +20,4 @@ const pessoasJson = `[{"nome": "joao","idade": 20,"eEleitor": true},
 
 fetch("pessoas.json")
     .then(resposta => resposta.json())
-    .then(valores => valores.forEach(valor => console.log(valor.nome)))
+    .then(valores => valores.forEach(valor => console.log(valor.nome)));
