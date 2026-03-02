@@ -1,0 +1,20 @@
+[{
+    "nome": "joao",
+    "idade": 20,
+    "eEleitor": true
+},
+{
+    "nome": "maria",
+    "idade": 25,
+    "eEleitor": true
+},
+{
+    "nome": "carlos",
+    "idade": 21,
+    "eEleitor": true
+},
+{
+    "nome": "ana",
+    "idade": 17,
+    "eEleitor": false
+}]

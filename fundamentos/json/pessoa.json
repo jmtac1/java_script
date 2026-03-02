@@ -1,0 +1,6 @@
+{
+    "nome": "joao",
+    "idade": 20,
+    "eEleitor": true,
+    "coresFavoritas": ["azul", "vermelho", "cinza"]
+}
